@@ -1,0 +1,11 @@
+# Ignore the Go build output
+*.exe
+*.out
+*.test
+*.log
+
+# Ignore Go's vendor directory (if you ever use `go mod vendor`)
+/vendor/
+
+# Ignore Docker artifacts (optional)
+docker-compose.override.yml
