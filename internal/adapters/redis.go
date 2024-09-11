@@ -1,13 +1,13 @@
 package adapters
 
 import (
-    "github.com/go-redis/redis/v8"
+	"github.com/go-redis/redis/v8"
 )
 
 func NewRedisClient(addr string) *redis.Client {
-    return redis.NewClient(&redis.Options{
-        Addr:     addr,
-        Password: "", // No password
-        DB:       0,  // Use default DB
-    })
+	return redis.NewClient(&redis.Options{
+		Addr:         "localhost:6379",
+		PoolSize:     10,
+		MinIdleConns: 3,
+	})
 }
